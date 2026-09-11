@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTP-8">
+        <meta name=""viewpoint" content="width=device-width,intial-scale=1.0">
+        <title>Run Cheetah Run</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- HOME SCREEN -->
+         <div class="home_screen">
+            <h1> RUN <img height="50px" width="100px" src="img/cheetah.gif"> RUN</h1>
+            <p> Welcome!</p>
+            <div class="mode">
+                <h3><u>Choose Mode</u></h3>
+
+                <button id="easy">Easy</button>
+                <button id="hard">Hard</button>
+            </div>
+            <button id="play">Play</button>
+            <span class="high_score">
+                Highest score 😎: <span id="highscore">0</span>
+            </span>
+         </div>
+        <!-- GAME SCREEN -->
+        <div class="game_area">
+            <div class="background"></div>
+            <div class="player">
+                <img id="playerimg"  src="img/frame1.png">
+            </div>
+            <div id="scorecnt">Your Score: 0</div>
+            <div class="obs">
+                <img src="img/obs_skeleton.png">
+            </div>
+            <div class="air_obs">
+                <img id="eagle" src="img/air_obs1.png">
+            </div>
+        </div>
+        <!-- GAME OVER -->
+         <div class="game_over">
+            <h2>Game Over!</h2>
+            <p> Your Score:<span id="finalscore">0</span></p>
+            <button id="restart">↻</button>
+         </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
