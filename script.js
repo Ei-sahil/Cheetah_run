@@ -59,20 +59,27 @@ setInterval(function(){
 
 let jumping=false;
 
-document.addEventListener("keydown", function(event) {
-
-    if (event.code === "Space" && !jumping) {
-        jumping =true;
-
+function jump(){
+    if(!jumping){
+        jumping=true;
         player.classList.add("jump");
-
+        
         setTimeout(function() {
             player.classList.remove("jump");
             jumping=false;
         }, 600);
-
     }
+}
 
+document.addEventListener("keydown", function(event) {
+
+    if (event.code === "Space" ) {
+        jump();
+    }
+});
+
+document.addEventListener("touchstart",function(){
+    jump();
 });
 
 let obstacle=document.querySelector(".obs");
